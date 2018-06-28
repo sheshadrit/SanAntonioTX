@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="VehicleDemo">
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="vehicleContoller.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="VehicleController">
+			<table>
+				<tr>
+				    <th>ID</th>
+				    <th>Manufacturer</th> 
+				    <th>Licence No</th>
+				    <th>Capacity</th>
+				    <th>NoOfWheels</th> 
+				    <th>NoOfSeats</th>
+	  			</tr>
+			  <tbody ng-repeat="vehicle in vehicleDetails">
+			       <tr>
+				       <td>{{vehicle.id}}</td>
+				       <td>{{vehicle.manufacturer}}</td>
+				       <td>{{vehicle.licenceNo}}</td>
+				       <td>{{vehicle.capacity}}</td>
+				       <td>{{vehicle.noOfWheels}}</td>
+				       <td>{{vehicle.noOfSeats}}</td>
+			       </tr>
+			  </tbody>
+			</table>
+		</div>
+	</body>
+</html>
